@@ -1,0 +1,20 @@
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\bin\Release\BitMapToMap.exe
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\bin\Release\BitMapToMap.pdb
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\bin\Release\BitMapToMap.xml
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.Main.resources
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.Resources.resources
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.vbproj.GenerateResource.Cache
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.exe
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.xml
+C:\Documents and Settings\DarkstaR\My Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.pdb
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.exe
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.xml
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.pdb
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\ResolveAssemblyReference.cache
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.Main.resources
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.vbproj.GenerateResource.Cache
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\bin\Release\BitMapToMap.exe
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\bin\Release\BitMapToMap.pdb
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\bin\Release\BitMapToMap.xml
+C:\Users\DarkstaR\Documents\Visual Studio 2008\Projects\BitMapToMap\obj\Release\BitMapToMap.Resources.resources

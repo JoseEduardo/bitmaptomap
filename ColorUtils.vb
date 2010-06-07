@@ -12,18 +12,10 @@
                            Color.White, Color.Gray, Color.DimGray, Color.Black, Color.Silver, _
                            Color.Aqua, Color.HotPink, Color.Pink, Color.Beige, Color.WhiteSmoke, Color.Wheat, Color.Coral, Color.Cornsilk, Color.Pink, Color.LightYellow}
 
-        'Static UseColors() As Color = {Color.Pink, Color.Red, Color.Maroon, _
-        '                               Color.Salmon, Color.Orange, Color.DarkOrange, _
-        '                               Color.LightYellow, Color.Yellow, Color.DarkGoldenrod, _
-        '                               Color.LightGreen, Color.Green, Color.DarkGreen, _
-        '                               Color.LightBlue, Color.Blue, Color.DarkBlue, _
-        '                               Color.Indigo, _
-        '                               Color.Violet, Color.DarkViolet}
-
         'This is a dictionary we will use so we dont go through the
         'mess of trying to calculate what to change a certain color 
         'too more than once
-        Static RememberDictionary As New Dictionary(Of Color, Color)
+        Static recentColors As New Dictionary(Of Color, Color)
 
         p.Maximum = Bmp.Width * Bmp.Height
         For x = 0 To Bmp.Width - 1
@@ -32,10 +24,10 @@
                 If UseColors.Contains(TempColor) Then
                     'This color is present in our list of colors to replace with
                     'Do nothing with it
-                ElseIf RememberDictionary.ContainsKey(TempColor) Then
+                ElseIf recentColors.ContainsKey(TempColor) Then
                     'This color has already been calculated, so we'll
                     'set it to the image
-                    Bmp.SetPixel(x, y, RememberDictionary(TempColor))
+                    Bmp.SetPixel(x, y, recentColors(TempColor))
                 Else
                     'Calculate the color to replace this one with
                     Dim LowestDif As Integer = 256 * 3 'Make this the biggest difference possible, since we just narrow it
@@ -50,7 +42,7 @@
 
                     'Set the new found color to the image, and save it to the dictionary
                     Bmp.SetPixel(x, y, ClosestColor)
-                    RememberDictionary.Add(TempColor, ClosestColor)
+                    recentColors.Add(TempColor, ClosestColor)
                 End If
 
                 'Update the progressbar
@@ -71,15 +63,17 @@
         'We will overlay Color1 on Color2 for every visible
         'Alpha value possible (1-255), get those colors
         'And see if any match our check color
+
+        If (check = td.Color1 OrElse check = td.Color2) Then Return True
+
         For alpha As Double = 1 To 255
             Dim ResultRGB As Integer = td.Color1.ToArgb + (1 - alpha) * td.Color2.ToArgb
             Dim ResultColor As Color = Color.FromArgb(ResultRGB)
             If check = ResultColor Then Return True
         Next
 
-        Return (check = td.Color1 OrElse check = td.Color2)
+        Return False
     End Function
-
 
     Public Function ColorDifference(ByVal Color1 As Color, ByVal Color2 As Color) As Integer
         Return Math.Abs(CInt(Color1.R) - CInt(Color2.R)) + Math.Abs(CInt(Color1.G) - CInt(Color2.G)) + Math.Abs(CInt(Color1.B) - CInt(Color2.B))
@@ -93,7 +87,6 @@
         Dim TempPixel1, TempPixel2 As Color
         Dim TempImage As New Bitmap(bmp.Width, bmp.Height)
         Dim R As Double = 1
-        'For i = 1 To 10
 
         For X As Integer = 0 To bmp.Width - 1
             For Y As Integer = 0 To bmp.Height - 1
@@ -121,7 +114,6 @@
                 bmp.SetPixel(X, Y, Color.FromArgb(Math.Min(Math.Sqrt(TempR / DivCount), 255), Math.Min(Math.Sqrt(TempG / DivCount), 255), Math.Min(Math.Sqrt(TempB / DivCount), 255)))
             Next
         Next
-        'Next
 
         Return bmp
     End Function
